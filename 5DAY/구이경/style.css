@@ -1,0 +1,11 @@
+/* 전체적으로 폰트 설정 */
+*{
+    font-size: 30px;
+    font-family: 'Do Hyeon', sans-serif;  
+}
+/* 메뉴 바 꾸미기 */
+.navbar{
+    padding: 80px;
+    background-color: aquamarine;
+    color: black;
+}

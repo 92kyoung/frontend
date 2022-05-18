@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" href="css/main.css">
+	
+	<title>Session Storage</title>
+</head>
+<body>
+  <h1>Session Storage</h1>
+  <label for="name">Name:</label>
+  <input id="name" name="name">
+  <button id="save" onClick="save();">Save</button>
+  <button id="read" onClick="read();">Read</button>
+  
+  <script >
+    function save(){
+      var name = document.getElementById("name").value;
+      sessionStorage.setItem('name', name);
+    }
+    
+    function read(){
+      var name = sessionStorage.getItem('name');
+      alert("Hello " + name);
+    }
+  </script>
+</body>
+</html>

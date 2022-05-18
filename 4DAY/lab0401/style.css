@@ -1,0 +1,136 @@
+/* 1. 필요없다고 생각되는 속성들을 초기화 
+     - 기본적으로 패딩 같은 것이 설정되어있음
+*/
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. h태그와 p태그는 기본적으로 위아래
+       margin을 가지고 있다.
+       margin을 초기화 시켜준다.
+ */
+
+ h1,p{
+     margin: 0;
+ }
+
+ /* 3. 배경을 추가해준다.
+   url하고 back쓰고 ctrl+space 누르면 자동완성됨
+   배경이 반복되는 것을 없애기 위해 no-repeat
+
+   vw와 vh와 %의 차이점
+   - vw,vh는 지금 가지고 있는 가로 세로 크기의 최대치
+
+   %을 했을 경우에는 마진,패딩 같은 것을 다 빼고 100%가 되기 때문에
+   정확하게 전체를 다 사용할 경우에는 vw,vh를 사용하면 된다.
+
+
+   cover 옵션: 사진이 깨지지 않을 정도에서 최대치의 크기로 확대해줌
+ */
+
+ #main{
+     background: url(KakaoTalk_20220516_103935100.jpg) no-repeat;
+     width: 100vw;
+     height: 100vh;
+
+     background-size: cover;
+     /* 가로 세로 가운데 위치 맞춰줌 */
+     background-position: center center;
+
+     /* 구글폰트 questrial */
+     font-family: 'Questrial', sans-serif;
+ }
+
+
+ /* 4. 컨텐츠의 텍스트 색상을 흰색으로 지정해준다 
+    
+    다른 애들 컬러는 다 흰색을 변경되었는데 
+    a 태그의 get started는 변경이 안됨
+ */
+ #contents{
+     color: white;
+
+     /* 절대적인 좌표로 지정을 해준다 */
+     position: absolute;
+     width: 100%;
+     /* 이렇게만 주게되면 시작 지점이 50%이고, 
+        요소(엘리먼트가) 50% 지점에 오는 것이 아니다.
+     */
+     top: 50%;
+
+     /* 요소 자체가 중앙에 오기 위해서  
+       Y 옵션은 위아래(y축을 의미함)
+     */
+     transform: translateY(-50%);
+
+     /* 텍스트를 중앙에 위치시킨다. */
+     text-align: center;
+
+
+ }
+
+
+ /* 5. a 태그의 속성을 정의 해준다 */
+ a{
+     /* 부모로 부터  상속된 값을 적용 받아라 */
+     color: inherit;
+     /* 링크 표시를 없애준다. */
+     text-decoration: none;
+ }
+
+
+ /* 6. 구글 폰트 사용 -contents안에 h1 태그 */
+ #contents h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    margin-bottom: 16px;
+    
+ }
+
+ #contents p{
+     /* 폰트 사이즈를 지정 */
+     font-size: 23px;
+
+     /* p태그와 a태그의 간격을 떨어뜨려 주기*/
+     margin-bottom: 16px;
+
+    }
+
+
+/* a 태그를 버튼 처럼 만들어본다 */
+
+#contents a{
+    display: inline-block;
+    /* 직사각형의 테두리를 만들어 준다 */
+    border: 2px solid white;
+    padding: 10px 20px;
+    /* 네모네모한 테두리를 깍는다 */
+    border-radius: 20px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    /* 마우스 올렸을 때 0.5초 동안의 에니메이션 효과 적용 */
+    transition: all 0.5s;
+    }
+    /* 마우스가 올라가면 색상이 변하도록 */
+#contents a:hover{
+    background-color: black;
+    } 
+
+/* 미디어 쿼리를 적용해보자. */
+
+@media (max-width:770px) {
+    #contents h1{
+        font-size: 50px;
+    }
+
+    #contents p{
+        font-size: 20px;
+    }
+    #contents a{
+        font-size: 12px;
+    }
+    
+}

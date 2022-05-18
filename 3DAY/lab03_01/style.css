@@ -1,0 +1,205 @@
+.navibar {
+    /* 플렉스 박스로 만들어 준다
+    가로 방향 정렬
+ */
+    display: flex;
+
+    /* 옆으로 정렬하기 
+    space between은 컨텐츠 사이에 중간중ㄱ간
+    스페이스를 넣어주는 역할을 한다.
+    
+    현재 있는 축(수평)에서 정렬하려면
+    justify-content 사용
+ */
+    justify-content: space-between;
+
+    /* 수직으로 정렬 하기.
+    현재 주어진 축과 반대 방향으로 적용을 시킨다(수직)
+    수직의 중앙으로 맞춰준다. 
+ */
+    align-items: center;
+
+
+    /* 색상을 입혀보자 */
+
+    background-color: rgb(51, 52, 54);
+    padding: 8px 12px;
+
+    /* 전체적으로 모서리가 붙어있어서
+       padding을 준다.
+
+        padding: 8px(위 아래) 12px(양 옆에)
+    */
+}
+
+/* margin:0 // 원하지 않는 공백을 지워버린다 */
+body{
+    margin: 0;
+}
+
+/* a 태그에 텍스트 밑줄과 색상이있는데 
+   text-decoration으로 없애주자
+*/
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
+
+/* 로고 사이즈를 키워보자 */
+
+.navbar_logo{
+    font-size: 24px;
+    color: white;
+}
+/* 로고 색상을 입혀본다 */
+
+.navbar_logo{
+    color: #d49466;
+}
+
+
+/*  이제 navbar_menu를 flex 박스 로 변경해보겠습니다. */
+.navbar_menu{
+    display: flex;
+    /* list 목록으로 되어있어서 점점점으로 되어있는데 이녀셕을 없애보자 */
+
+    list-style: none;
+
+    /*  메뉴가 자세히 보면 센터가 아닌 것을 알 수 있어서 맞춰주기 위해서  padding을 적용한다 */
+
+    padding-left: 0;
+}
+
+/* 메뉴 아이템들이 다닥다닥 붙어 잇기 때문에 스페이스를 넣어서 정렬을 해준다 */
+
+.navbar_menu li{
+    padding: 8px 12px;
+
+}
+
+
+/* 링크 아이콘의 스타일을 지정한다.
+점점점 생긴 목록 스타일 없애주고
+스타일을 지정해준다. */
+
+.navbar_icons{
+    list-style: none;
+    color: white;
+    /* 너네들 옆으로 정렬해 */
+    display: flex;
+    padding-left: 0;
+}
+
+/* navbar_icons의 간격이
+다닥다닥 붙어잇어서 간격을 넣어보자 */
+.navbar_icons li{
+    padding: 8px 12px;
+}
+
+/*  메뉴에 마우스를 올리면 배경색이 변경되도록 해보자 */
+
+.navbar_menu li:hover{
+    background-color: #d49466;
+    /* 네모 모서리 깍기 */
+    border-radius: 4px;
+}
+
+/* 원래 문서의 흐름에서 빠져나와서
+지정된 위치에 정돈이 되게하도록 적용 */
+.navbar_togleBtn{
+    /* 원래 문서의 흐름을 벗어나는 방법 
+       포지션을 절대 경로로 지정해준다
+    */
+    position: absolute;
+    /* 오른쪽의 적당한 위치에 위치하도록 해준다 */
+    right:43px;
+
+    font-size: 24px;
+    color: #d49466;
+
+
+    /* 메뉴 아이콘이 기본적으로 안보이도록 해준다 */
+    display: none;
+}
+
+/* 반응형 웹사이트로 만들기 위해 크기가 일정정도 적어졌을 때 
+   다르게 적용할 스타일을 입힌다.
+   -미디어 쿼리를 사용한다.
+*/
+
+@media screen and (max-width: 770px) {
+    /* 맨 바깥쪽에 있는 .navibar 을 row에서 컬럼으로 바꾼다. */
+    .navibar{
+        flex-direction: column;
+        
+        /* 공간에 여유를 주기 위해서 padding */
+
+        padding: 8px 24px;
+    }
+
+    /* 메뉴 목록도 아래로 정렬되게 바꾼다. */
+
+    .navbar_menu{
+        /* 처음에 안보이게 해야함. 토글버튼을 눌렀을 때 보이도록 하기 위해서 */
+        display: none;
+
+        flex-direction: column;
+
+        /* 반대쪽 아이템즈를 사용해서 center를
+        맞춰준다 */
+
+        align-items: center;
+
+
+        /* width 적용을 하겠습니다 */
+        width: 100%;
+    }
+
+    /* 
+    너비 만큼 하이라이트가 생기도록 해준다.
+    */
+    .navbar_menu li{
+        width: 100%;
+
+        /* 자동으로 텍스트가 왼쪽으로 붙는다. 
+           text-align을 center로 해준다.
+        */
+         text-align: center;
+    }
+
+    /* .navbar_icons 방향을 바꾸지 않는 상태(현상태)에서 중간으로 가도록 설정해준다. */
+
+    .navbar_icons{
+        
+
+        /* 지금 햔재 측 에서 중간으로 가도록 설정해준다*/
+        /* 지금 현재 축에서 중간으로 이동 */
+        justify-content: center;
+
+        /* 폭을 전체적으로 설정해준다*/
+        width: 100%;
+
+        /* 아이콘도 처음에 보여지지 않아야한다. */
+        display: none;
+    }   
+    
+    /* 사이즈가 작아지면 햄버빵이 보이게 한다. */
+    .navbar_togleBtn{
+        
+        display:block;
+    } 
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+
+    .navbar_icons li:hover{
+        background-color: orange;
+        /* 네모 모서리 깍기 */
+        border-radius: 4px;
+    }
+  
+}

@@ -1,0 +1,78 @@
+/* 
+웹 브라우저의 초기 속성을 지정해준다.
+모든 태그에 기본적으로 적용이 된다.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body 에 background 색상을 지정해주겠습니다 */
+
+body{
+    background-color: #204063;
+
+
+    /* 현재 상태(수평)에서 중앙에 위치 */
+    display: flex;
+    justify-content: center;
+
+
+    /* 수직 상태에서도 중앙에 위치 */
+    align-items: center;
+    
+    /* align-items만 하면 변화가 안생긴다.
+    수직의 위치 상태를 적하기 위해서는 height를 주어야한다. */
+    height: 100vh;
+}
+
+.btn{
+    background: none;
+
+    /* 흰 색 선으로 그려준다 */
+    border: 2px solid white;
+    font-size: 35px;
+    color: white;
+
+    /* 패딩을 적용해준다 */
+    padding: 20px 40px;
+
+    /* 넓이를 지정해준다 */
+    width: 250px;
+
+    /* 마우스를 올렸을 때 손가락 모양 */
+    cursor: pointer;
+
+    /*  버튼 안에 적용되기 위해서 여기에 작성 */
+    position: relative;
+}
+
+
+/* 포지션이 절대위치로 top0이 되도록 적용해본다
+*/
+
+.btn-swap span{
+    position: absolute;
+    top: 0;
+
+    /* 왼쪽으로 위치시킨다 */
+    left: 0;
+
+    /* 색상을 입힌다 */
+    background: red;
+    padding: 20px 40px;
+    width: 100%;
+
+    /* 불투명도 opacity */
+    opacity: 0;
+
+    /* 애니메이션 효과 (화면이 천천히 바뀜) */
+    transition: opacity 0.5s;
+}
+
+/* 버튼 위에 마우스를 올렸을 때 polytech을 보여주기 위해서 적용하는 부분 */
+.btn-swap:hover span{
+    opacity: 1;
+}

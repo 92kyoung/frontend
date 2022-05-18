@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.onload 이벤트 처리</title>
+    <!-- 
+        window.onload 이벤트
+        웹 페이지가 로딩될 때 DOM이 다 로딩된 후에 호출할 때 사용한다. 
+        문서에서 하나만 존재해야 한다.
+        만약에 중복되게 onload 이벤트를 적용하게 되면 마지막에 선언된 onload 이벤트가 실행이 된다.
+     -->
+     <script src="app2.js"></script>
+    </head>
+    <body onload="loadData();">
+        <div id="start">여기에 내용이 표시 됨</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-01</title>
+    <!-- js를 어디다 선언을 해야하느냐?  
+        기본적으로 헤드와 헤드 사이에 작성을 한다.
+          head
+             script   /script
+          /head
+
+          but 이렇게 사용하면 문제가 발생할 수 있음
+          자비스크립트 성능 최적화에 대해 쓰여있는 - 빨간색 더글라스 클락포드 책에 따르면
+
+          바디 태그의 맨 마지막 바로 위에 스크립트 코드를 작성해야 성능이 좋다고 한다.
+          DOM 구조가 다 올라오기도 전에 자바스크립트가 호출될 수 도 있다. 이렇게 되면 오류가 발생하므로
+          자바스크립트 코드는 body scipt /script /body
+          이렇게 사용해야 한다.
+
+
+        
+        js 실행하는 방법 
+          1) script 태그 안에 사용
+
+          2) webBrowser 안에서도 js를 사용이 가능
+             웹브라우저 -> 개발자 환경 -> 콘솔에서 사용가능 -> console.log("hi");
+         
+          3) 노드에서도 실행 할 수 있다. 
+             ctrl+` (터미널 열기)
+             
+             -node
+             -console.log("hi");
+
+             node app.js 로 실행
+
+          4) 자바스크립트를 .js파일로 만들어서 로드 할 수 있다.
+             실행하고자 하는 자바스크립트 파일 위치로 이동  (cd .\js\)
+            -->
+
+    <!-- js실행 1번 방식 
+        <script>
+        document.write("hello");
+        </script>-->
+
+    </head>
+<body>
+        
+        <script src="js/app.js"></script>
+</body>
+</html>

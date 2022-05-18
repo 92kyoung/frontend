@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 1. head 태그
+    문서의 머리를 나태내는 태그이다.
+    title 태그는 웹페이지의 제목을 나타내고
+    meta 태그는 웹 페이지의 보이지 않은 정보를 제공하는데 사용된다. 
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서</title>
+
+    <!-- 2. 폰트 설정 
+        구글 웹폰트에서 마음에 드는 폰트 선택
+        마음에 드는 폰트에서 폰트 링크 복사 후 붙여 넣기
+
+        style 태그 생성 하고 구글 페이지에 있는 font-family 태그를 복사한다.
+
+        *{} 는 모든 항목의 스타일을 바꾼다는 의미이다.
+    
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@700&family=Hahmlet:wght@300;400&family=Jua&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+
+    <style>*{
+       font-family: 'Black Han Sans', sans-serif;
+       font-family: 'Gothic A1', sans-serif;
+       font-family: 'Hahmlet', serif;
+       font-family: 'Jua', sans-serif;
+       font-family: 'Nanum Myeongjo', serif;
+       font-family: 'Noto Sans KR', sans-serif;;
+    }
+    </style>
+
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 3. body 태그
+
+    웹 브라우저 상에 보여지는 문서 영역이다.
+    html에는 오직 한개의 body 만 존재할 수 있다.
+ -->
+<body>
+
+    <!-- 4. 페이지 맨 첫번째 헤더 작성
+            h1 태그: 가장 크고 굵은 글씨 사용
+            center 태그: 글자를 가운데 정렬함
+    -->
+    <header>
+        <h1>    <center>  이  력  서  </center> </h1>
+    </header>
+
+<!-- 5. hr 태그
+    : 가로 구분선 넣기
+    hr align="center(위치/가운데정렬)" style="border:(선종류) solid(일직선) 1px(선 굵기) #000063(선 색상)"
+-->
+
+<hr align="center" style="border: solid 1px #000063">
+
+<!-- 6. 이미지 파일 넣기
+        center 태그 사용해서 사진 가운데 정렬하기
+        img src = "경로/사진명" 형식으로 작성
+        사용하고자하는 사진이 html 파일과 같은 폴더 내에 있을 경우 사진명만 작성해도 된다.
+-->
+<center>
+ <img src="myphoto.jpg">   
+</center>
+
+<!-- 7. hr: 가로 구분선 넣기  -->
+<hr align="center" style="border: solid 1px #000063">
+
+<!-- 8. 이력사항 작성 목록
+     li 태그: '인적사항','학력 사항' 등 큰 카테고리를 리스트로 묶는다.
+     h2 태그: 리스트를 2번쨰로 크고 굵은 글씨를 사용한다     
+
+-->
+
+<!-- 9. 입력 양식
+     form 태그를 사용해서 입력 양식을 사용한다.
+     placeholder: 입력 양식 예시를 나타낸다.
+     type: text, number, email 등 // 해당 타입에 맞지 않은 값이 들어올 경우 제출이 되지 않는다.
+     required: 입력 필수 사항 // 미 입력시 제출이 되지 않는다.
+     autofocus: 웹페이지 실행시 해당 항목에 강조 표시가 되고 쿼서가 움직인다. 
+-->
+
+<!-- 10. 인적사항
+     ul 그룹으로 인적 사항 묶음
+-->
+<ul>
+    <li><h3> 인적 사항 </h3></li>
+    <form action=""method="get">
+
+    
+ <!-- 이름 -->
+<label for="name"> 이름:</label>
+<input id="name" name="name" type="text" autofocus required placeholder="ex)홍길동"> <br>
+
+ <!-- 주소 -->
+ <label for="address"> 주소:</label>
+ <input id="address" name="address" type="text"  required placeholder="ex)경기도 고양시 00로 000동 0000호"> <br>
+
+<!-- 연락처 -->
+<label for="pn"> 연락처:</label>
+<input id="pn" name="pn" type="pn"  required placeholder="ex)010-0000-0000"> <br>
+
+<!-- enamil / type: 이메일로 지정, 이메일 형식(@ 포함)이 아닐경우 제출이 되지 않는다 / -->
+<label for="Email"> Email:</label>
+<input id="Email" name="Email" type="email"  required placeholder="ex)1234@naver.com"> <br>
+</ul>
+
+
+<hr align="center" style="border: solid 1px #000063">
+
+
+<!--  11. 학력 사항 
+    ul 그룹으로 학력 사항 묶음
+-->
+<ul>
+    <li><h3> 학력 사항 </h3></li>
+  
+   
+ <!-- 대학교 소재지 -->
+<label for="univ_locate"> 대학교 소재지:</label>
+<input id="univ_locate" name="univ_locate" type="text"  required placeholder="ex)서울"> <br>
+
+ <!-- 대학교 명 -->
+ <label for="univ_name"> 대학명:</label>
+ <input id="univ_name" name="univ_name" type="text"  required placeholder="ex)서울대학교"> <br>
+
+ <!-- 학과명 -->
+<label for="major"> 학과명:</label>
+<input id="major" name="major" type="text"  required placeholder="ex)전자공학과"> <br>
+</ul>
+
+<hr align="center" style="border: solid 1px #000063">
+
+<!--  12. 자격증 및 외국어 
+    ul 그룹으로 카테고리 묶음
+-->
+<ul>
+    <li><h3> 자격증 및 외국어  </h3></li>
+    
+   
+ <!-- 보유 자격증-->
+<label for="certificate"> 보유 자격증:</label>
+<input id="certificate" name="certificate" type="text" placeholder="ex)정보처리기사,SQLD"> <br>
+
+ <!-- 토익 점수 -->
+ <label for="TOIEC">토익 점수:</label>
+ <input id="TOIEC" name="TOIEC" type="number"  placeholder="ex)960"> <br>
+</ul>
+<hr align="center" style="border: solid 1px #000063">
+
+<!--  13. 수상 경력 
+    ul 그룹으로 카테고리 묶음
+-->
+<ul>
+    <li><h3> 수상경력  </h3></li>
+    
+   
+ <!-- 14. 텍스트 박스 생성해서 수상경력 사항 입력하기
+    textarea 태그를 이용해서 텍스트 박스를 생성.
+    cols는 열(가로),rows는 행(세로)를 의미
+-->
+<label for="prize"> 수상 경력을 입력해주세요</label><br>
+<textarea name="prize" id="prize" cols="100" rows="10"></textarea> <br>
+</ul>
+<hr align="center" style="border: solid 1px #000063">
+
+<!--  15. 기타 사항 
+    ul 그룹으로 카테고리 묶음
+-->
+<ul>
+    <li><h3> 기타 사항  </h3></li>
+    
+ <!-- 16. 수상경력 사항 입력하기
+    textarea 태그를 이용해서 텍스트 박스를 생성.
+-->
+<label for="etc"> 양식과 관계없이 하고싶은 이야기를 자유롭게 작성해주세요 </label><br>
+<textarea name="etc" id="etce" cols="100" rows="10"></textarea> <br>
+</ul>
+
+<hr align="center" style="border: solid 1px #000063">
+
+<ul>
+    <!-- 17. 날짜  시간 가져오기 
+    input 태그를 사용한다. 타입에 datetime-local을 입력하면
+    현재 자신의 지역의 날짜,시간 데이터가 나온다.
+    -->
+    <center>
+       <h4>제출 날짜 <input type="datetime-local"><br> </h3> 
+    </center>
+
+</ul>
+
+  <!-- 18. 전송하기 버튼
+    button 태그를 사용해서 버튼을 생성하고 타입을 submit으로 설정하여
+    위에서 입력한 입력 사항을 전송하는 역할의 버튼을 생성한다.
+
+    submit 은 모든 라벨 다 작성 후 form 태그의  맨 마지막에 위치하면 된다 
+-->
+  <center>
+     <button type="submit"> 전송하기 </button>   
+  </center>
+ 
+</form>
+
+</body>
+</html>

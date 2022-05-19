@@ -1,0 +1,62 @@
+#todo_title{
+    text-align: center;
+}
+
+#todo_list{
+
+        /* 절대적인 위치 지정 */
+        position: absolute;
+        left: 50%;
+        /* X축 Y축 변경해서 첫 시작 부분을 변경 */
+        transform: translateX(-50%);
+        /* 리스트 색상 지우기 */
+        text-decoration: none;
+        /* 리스트에 있는 점점점 지우기 */
+        list-style: none;
+}
+#todo_list form{
+    /* 새로운 항목 주가하는 form  가운데로 정렬하기 */
+    text-align: center;
+}
+ li{
+    font-size: 20px;
+    padding: 20px 10px;
+    /* /텍스트 뒤에있는 백그라운드 박스 만들기 */
+    background-color: rgb(238, 238, 245);
+    padding-top: 10px;
+    /* padding-bottoms: 10px; */
+    width: 300px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid white; 
+     /* 박스의 크기가 넘어가면 줄바꿈을 하게 설정 */ 
+    /* word-wrap: break-word*/
+ }  
+
+ /* 체크 표시 아이콘 */
+ #todo_list i{
+    color:dodgerblue;
+ }
+ /* 쓰레기통 아이콘 */
+ #todo_list i2 {
+     color: red;
+     position: absolute;
+     right: 6%;
+ }
+
+
+ /* clear all 버튼 크기 키우기 */
+ ul button{
+      /* X축 Y축 변경해서 첫 시작 부분을 변경 */
+      transform: translateX(-20%);
+     text-align: center;
+     color: red;
+     background-color:rgb(238, 238, 245);
+     font-size: 20px;
+     padding: 20px 30px;
+     border: 1px solid white; 
+    
+ }
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5399d7b2e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 페이지 타이틀 -->
+    <div id="todo_title">
+        <h1>할 일</h1>
+    </div>
+
+
+
+     <!-- 페이지 투두 리스트 -->
+    <div id="todo_list">
+            <form action="" method="get">
+                <!-- 새로운 항목을 추가할 수 있도록 input 생성 -->
+                <input type="todo_list" name="todo_list" type="text" placeholder="해야할 일 적기">
+                <!-- 제출용 전송하기 버튼 생성 -->
+                <button type="submit"> 추가하기 <i class="fa-solid fa-plus-large"></i></button>
+            </form>
+            <br>
+            <li> 
+                <!-- 체크 표시 아이콘 넣기 -->
+                <i class="fa-solid fa-square-check"></i> 
+                test 
+                <a href="#" class="delete">
+                    <!-- 삭제용 쓰레기통 아이콘 넣기 -->
+                    <i2 class="fa-solid fa-trash-can"></i2>
+                </a>
+            </li>
+            <br>
+
+            <li> 
+                <i class="fa-solid fa-square-check"></i>
+                semifinal 
+                <a href="#" class="delete">
+                    <i2 class="fa-solid fa-trash-can"></i2>
+                </a>
+            </li>
+            <br>
+
+            <li> 
+                <i class="fa-solid fa-square-check"></i>
+                final test
+                <a href="#" class="delete">
+                    <i2 class="fa-solid fa-trash-can"></i2>
+                </a>
+            </li>
+            <br><br>
+            <ul>
+              <center><button>Clear All</button></center>
+            </ul>    
+        </div>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+</html>
